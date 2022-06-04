@@ -1,0 +1,190 @@
+body {
+    background-color: #d5f1d4;
+}
+
+.formulario h4 {
+    color: #484949;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    border-bottom: 4px solid #52be83;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.formulario h2 {
+    color: #234d50ca;
+}
+
+.cerrar {
+    border: none;
+    color: rgb(85, 85, 85);
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 7px;
+    background-color: #bdc3d3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cerrar:hover {
+    background-color: #da3d3d;
+    color: rgb(247, 197, 197);
+}
+
+a {
+    border: none;
+    text-decoration: none;
+}
+
+.actualizar {
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 7px;
+    background-color: #3557b4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.actualizar:hover {
+    background-color: #3d67da;
+    color: rgb(197, 223, 247);
+}
+
+.close {
+    position: relative;
+}
+
+
+/* SWITCH */
+
+#Cuadrado {
+    width: 100px;
+    height: 100px;
+    background: #2980b9;
+    border-color: #FF622C;
+    border-style: solid;
+    border-radius: 25px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+/* The slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: green;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.boton button {
+    margin-top: 35px;
+}
+
+.boton button {
+    width: 200px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    background-color: #4363bd;
+}
+
+.boton button:hover {
+    background-color: var(--blue);
+}
+
+.btn-cancelar {
+    margin-top: 35px;
+}
+
+.btn-cancelar {
+    width: 200px;
+    padding: 10px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    background-color: #646464;
+}
+
+.btn-cancelar:hover {
+    background-color: var(--dark-grey);
+    color: var(--grey);
+}

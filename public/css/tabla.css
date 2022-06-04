@@ -1,0 +1,136 @@
+main a {
+    text-decoration: none;
+}
+
+main .status-activo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    right: 20px;
+    padding: 4px 10px;
+    background: #58D68D;
+    text-decoration: none;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+main .status-inactivo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    right: 20px;
+    padding: 4px 10px;
+    background: #CB4335;
+    text-decoration: none;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+.b1 {
+    position: relative;
+    display: flex;
+    padding: 4px 20px;
+    background: #C39BD3;
+    text-decoration: none;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.b2 {
+    position: relative;
+    display: flex;
+    padding: 4px 20px;
+    background: #9B59B6;
+    text-decoration: none;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.b3 {
+    position: relative;
+    display: flex;
+    padding: 4px 20px;
+    background: #E74C3C;
+    text-decoration: none;
+    color: white;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+main .b1:hover {
+    background: #73C6B6;
+    color: white;
+}
+
+main .b2:hover {
+    background: #AF7AC5;
+    color: white;
+}
+
+main .b3:hover {
+    background: #db4343;
+    color: white;
+}
+
+main .icono1 {
+    font-size: 26px;
+    text-align: center;
+    justify-content: center;
+    color: #45B39D;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+.icono2 {
+    font-size: 26px;
+    text-align: center;
+    justify-content: center;
+    color: #A569BD;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+.icono3 {
+    font-size: 26px;
+    text-align: center;
+    justify-content: center;
+    color: #d44949;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+
+/* RESPONSIVO */
+
+
+/* CONTENT */
+
+@media screen and (max-width: 768px) {
+    .chart {
+        position: relative;
+        width: calc(100% - 60px);
+        transition: all .3s ease;
+    }
+    nav .nav-link,
+    nav .divider {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .chart {
+        width: 100%;
+    }
+}
