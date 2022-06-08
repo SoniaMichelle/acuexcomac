@@ -172,18 +172,18 @@
                                     <input type="text" class="form-control" id="fecha_baja"
                                         name="fecha_baja" placeholder="Año de baja">
                                 </div>
-                                <div class="form-group col-md-2 mt-4 pt-3">
+                                {{-- <div class="form-group col-md-2 mt-4 pt-3">
                                     <div class="form-check">
                                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                                         <label class="form-check-label" for="exampleCheck1">En curso</label>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="form-group col-md-4">
                                     <label for="estatus">Status</label>
                                     <select id="estatus" name="estatus" class="form-control">
                                         <option selected>Seleccione un status</option>
-                                        <option id="1" class="activo">Activo</option>
-                                        <option id="2" class="inactivo">Inactivo</option>
+                                        <option value="Activo" class="btn btn-success">Activo</option>
+                                        <option value="Inactivo" class="btn btn-danger">Inactivo</option>
                                     </select>
                                 </div>
                             </div>

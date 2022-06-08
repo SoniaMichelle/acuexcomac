@@ -34,7 +34,7 @@
                             @foreach ($docentes as $docente)
                                 <tr>
                                     <td scope="row">{{ $docente->id }}</td>
-                                    <td>{{ $docente->nombre_docente }}</td>
+                                    <td values="{{$docente->id}}"> {{ $docente->nombre_docente }}</td>
                                     <td>{{ $docente->ap_paterno_docente }}</td>
                                     <td>{{ $docente->asignatura }} </td>
                                     <td>

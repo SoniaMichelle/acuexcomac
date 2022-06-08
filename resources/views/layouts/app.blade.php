@@ -64,7 +64,6 @@
                             class='bx bx-chevron-right icon-right'></i></a>
                     <ul class="side-dropdown">
                         <li><a href="{{ route('docentes.index') }}">Todos los docentes</a></li>
-                        <li><a href="#">Crar Lista</a></li>
                     </ul>
                 </li>
                 <li>

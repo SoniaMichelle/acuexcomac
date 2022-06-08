@@ -38,7 +38,7 @@ return new class extends Migration
 
             $table->string('ciclo_escolar');
             $table->string('fecha_ingreso');
-            $table->string('fecha_baja');
+            $table->string('fecha_baja')->nullable();
             $table->string('estatus');
            
             $table->timestamps();

@@ -87,7 +87,7 @@ main .notas {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    background: var(--white);
+    background: white;
     padding: 30px;
     cursor: pointer;
     flex-wrap: wrap;
@@ -98,9 +98,40 @@ main .notas {
 }
 
 .card-deck .card {
+    background: white;
+    border: none;
     display: flex;
     border-radius: 12px;
     padding: 15px 20px;
-    background-color: #A3E4D7;
     text-decoration: none;
+    box-shadow: 4px 4px 16px #2ecc70b6;
+    text-transform: uppercase;
+}
+
+.card-deck .card:hover {
+    background-color: #82E0AA;
+}
+
+.card-deck .card h1:hover {
+    color: white;
+}
+
+.card-deck .card .eliminar i {
+    display: flex;
+    font-size: 25px;
+    color: rgb(248, 132, 132);
+}
+
+.card-deck .card .eliminar i:hover {
+    color: white;
+}
+
+.card-deck .card .edit i {
+    display: flex;
+    font-size: 25px;
+    color: #5499C7;
+}
+
+.card-deck .card .edit i:hover {
+    color: white;
 }

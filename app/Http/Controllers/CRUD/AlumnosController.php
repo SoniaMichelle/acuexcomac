@@ -73,6 +73,7 @@ class AlumnosController extends Controller
         $registro->ciclo_escolar = $request->ciclo_escolar;
         $registro->fecha_ingreso = $request->fecha_ingreso;
         $registro->fecha_baja = $request->fecha_baja;
+        
         $registro->estatus = $request->estatus;
 
         $registro->save();

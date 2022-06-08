@@ -52,8 +52,8 @@
                                     <select id="sexo_alumno" name="sexo_alumno" class="form-control"
                                         value="{{ old('sexo_alumno', $alumnos->sexo_alumno) }}">
                                         <option selected>Seleccione un genero</option>
-                                        <option>Masculino</option>
-                                        <option>Femenino</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Femenido">Femenino</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-4">
@@ -94,7 +94,7 @@
                                         <div id="alerta8"></div>
                                 </div>
                                 <div class="form-group col-md-4">
-                                    <label for="alcaldia_alumno">Ciudad</label>
+                                    <label for="alcaldia_alumno">Alcaldia</label>
                                     <input type="text" class="form-control" id="alcaldia_alumno" name="alcaldia_alumno"
                                         placeholder="Alcaldia" value="{{ old('alcaldia_alumno', $alumnos->alcaldia_alumno) }}">
                                         <div id="alerta9"></div>

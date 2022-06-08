@@ -1,25 +1,24 @@
 @extends('layouts.app')
-@section('titulo', 'Alumnos')
+@section('titulo', 'Grados')
 @section('css')
     <link rel="stylesheet" href="{{ asset('css/evento.css') }}">
 @endsection
 @section('contentenido')
     <!-- MAIN -->
     <main>
-        <h1 class="title">Cursos</h1>
+        <h1 class="title">Grados</h1>
         <ul class="breadcrumbs">
-            <li><a href="#">Dashboard</a></li>
+            <li><a href="{{route('home')}}">Dashboard</a></li>
             <li class="divider">/</li>
-            <li><a href="#" class="active">Cursos</a></li>
+            <li><a href="#" class="active">Grados</a></li>
         </ul>
         <div class="p-5 bg-white rouded shadow-lg" style="border-radius: 10px">
             <div class="content-data">
                 <div class="head">
-                    <h3>Todos los Docentes</h3>
+                    <h3>Todos los Grados</h3>
                     <div class="col d-flex justify-content-end">
                         <div class="menu">
-                            <a href="{{ route('grados.create') }}" style="text-decoration: none"> <i
-                                    class='bx bxs-user-plus icon'></i></a>
+                            <a href="{{ route('grados.create') }}" style="text-decoration: none"><i class='bx bxs-message-square-add icon'></i></a>
                         </div>
                     </div>
                 </div>
@@ -31,13 +30,17 @@
                                     <h1 class="text">{{ $grado->nombre_grado }}</h1>
                                 </a>
                             </div>
-                            <div class="col text-center">
+                           
+                            <div class="col d-flex">
+                                <div class="col">
+                                    <a href="" class="btn edit"><i class='bx bxs-edit-alt icon'></i></a>
+                                </div>
                                 <form action="{{ route('grados.destroy', $grado) }}" method="POST"
                                     class="form_eliminar_alumno">
                                     @csrf
                                     @method('delete')
-                                    <button type="submit" class="btn btn-outline-danger" >
-                                        <i class='bx bxs-trash'></i>
+                                    <button type="submit" class="btn eliminar" >
+                                        <i class='bx bxs-trash icon'></i>
                                     </button>
                                 </form>
                             </div>

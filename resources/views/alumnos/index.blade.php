@@ -39,21 +39,22 @@
                                 <td>{{ $alumno->nombre_alumno }}</td>
                                 <td>{{ $alumno->ap_paterno_alumno }}</td>
                                 <td>{{ $alumno->estatus }}
-                                    {{-- @if ($alumno->estatus == 1)
-                                            <span class="btn-sm btn-succes">Activo</span>
-                                        @else
-                                            <span class="btn-sm btn-danger">Inactivo</span>
-                                        @endif --}}
-
+                                   {{--  @if ($alumno->estatus == 'Activo')
+                                        <span class="btn-sm btn-succes">Activo</span>
+                                    @else
+                                        <span class="btn-sm btn-danger">Inactivo</span>
+                                    @endif
+ --}}
                                 </td>
                                 <td>
-                                    <a href="{{ route('alumnos.show', $alumno->id) }}"><button type="button"
-                                            class="b1 icono1"><i class='bx bxs-user-detail'></i></button>
+                                    <a class="btn btn-outline-success" href="{{ route('alumnos.show', $alumno->id) }}"><i
+                                            class='bx bxs-user-detail'></i></button>
                                     </a>
                                 </td>
                                 <td>
-                                    <a href="{{ route('alumnos.editar', $alumno->id) }}"><button type="button"
-                                            class="b2 icono2"><i class='bx bxs-edit-alt'></i></button>
+                                    <a class="btn btn-outline-warning"
+                                        href="{{ route('alumnos.editar', $alumno->id) }}"><i
+                                            class='bx bxs-edit-alt'></i></button>
                                     </a>
                                 </td>
                                 <td>
@@ -61,8 +62,8 @@
                                         class="form_eliminar_alumno">
                                         @csrf
                                         @method('delete')
-                                        <button type="submit" class="b3 icono3">
-                                            <i class='bx bxs-user-x'></i>
+                                        <button type="submit" class="btn btn-outline-danger">
+                                            <i class='bx bxs-user-x icon'></i>
                                         </button>
                                     </form>
                                 </td>

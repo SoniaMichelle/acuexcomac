@@ -1,9 +1,9 @@
 @extends('layouts.app')
-@section('titulo', 'Alumnos')
+@section('titulo', 'Grados')
 @section('contentenido')
     <!-- MAIN -->
     <main>
-        <h1 class="title">Alumnos</h1>
+        <h1 class="title">Grados</h1>
         <ul class="breadcrumbs">
             <li><a href="#">Dashboard</a></li>
             <li class="divider">/</li>
@@ -14,13 +14,18 @@
                 <div class="head">
                     <h3>Lista Alumnos</h3>
                     <div class="menu">
-                        <a href="{{ route('alumnos.create') }}" style="text-decoration: none"><i
-                                class='bx bxs-user-plus icon'></i></a>
+                        <div class="col">
+                            <button type="button" class="btn btn-success">Excel</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-danger">Pdf</button>
+                        </div>
+                       <div class="col">
+                        <button type="button" class="btn btn-warning">Imprimir</button>
+                       </div>
                     </div>
                 </div>
-                {{-- CONTACTOS --}}
-
-
+                {{-- Lista de alumnos que se encuentrar dentro del grado seleccionado --}}
                 <table id="example" class="table table-striped">
                     <thead>
                         <tr>
@@ -28,7 +33,7 @@
                             <th>Nombre</th>
                             <th>Apellido Paterno</th>
                             <th>Apellido Materno</th>
-                            <th>Eliminar</th>
+                            {{-- <th>Eliminar</th> --}}
                         </tr>
                     </thead>
                     <tbody>
@@ -38,7 +43,7 @@
                                 <td value="{{ $lista->id }}">{{ $lista->nombre_alumno }}</td>
                                 <td>{{ $lista->ap_paterno_alumno }}</td>
                                 <td>{{ $lista->ap_materno_alumno }}</td>
-                                <td>
+                                {{-- <td>
                                     <form action="" method="POST" class="form_eliminar_alumno">
                                         @csrf
                                         @method('delete')
@@ -46,7 +51,7 @@
                                             <i class='bx bxs-user-x'></i>
                                         </button>
                                     </form>
-                                </td>
+                                </td> --}}
                             </tr>
                         @endforeach
                     </tbody>

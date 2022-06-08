@@ -41,7 +41,6 @@
                                 value="{{ old('fecha_alum') }}">
                             <div id="alerta3"></div>
                         </div>
-                       
                         <div class="row text-center mb-4 mt-5 boton">
                             <div class="col-md-12 ">
                                 <button type="submit"  onclick="return valPagoAlum();">Registrar</button>
