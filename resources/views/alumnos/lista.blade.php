@@ -13,17 +13,7 @@
             <div class="content-data">
                 <div class="head">
                     <h3>Lista Alumnos</h3>
-                    <div class="menu">
-                        <div class="col">
-                            <button type="button" class="btn btn-success">Excel</button>
-                        </div>
-                        <div class="col">
-                            <button type="button" class="btn btn-danger">Pdf</button>
-                        </div>
-                       <div class="col">
-                        <button type="button" class="btn btn-warning">Imprimir</button>
-                       </div>
-                    </div>
+
                 </div>
                 {{-- Lista de alumnos que se encuentrar dentro del grado seleccionado --}}
                 <table id="example" class="table table-striped">
@@ -62,6 +52,16 @@
     <!-- MAIN -->
 @endsection
 @section('js')
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
+    <script src="{{ asset('dataTables/Buttons-2.2.3/js/dataTables.buttons.min.js') }}"></script>
+    <script src="{{ asset('dataTables/JSZip-2.5.0/jszip.min.js') }}"></script>
+    <script src="{{ asset('dataTables/pdfmake-0.1.36/pdfmake.min.js') }}"></script>
+    <script src="{{ asset('dataTables/pdfmake-0.1.36/vfs_fonts.js') }}"></script>
+    <script src="{{ asset('dataTables/Buttons-2.2.3/js/buttons.html5.min.js') }}"></script>
     <script src="{{ asset('js/datatable.js') }}"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ asset('js/validacion.js') }}"></script>

@@ -140,7 +140,7 @@
                                         name="asignatura">{{ $alumno->fileCurp }}</span> --}}
                                     <div class="but">
                                         <a target="blank_" class="form-control btn-info"
-                                            href="documentos/{{ $alumno->fileCurp }}">{{ $alumno->fileCurp }}</a>
+                                            href="archivos_alumnos/{{ $alumno->fileCurp }}">{{ $alumno->fileCurp }}</a>
                                     </div>
                                 </div>
                             </div>

@@ -35,7 +35,7 @@
                         @foreach ($files as $file)
                             <tr>
                                 <th scope="row">{{ $file->id }}</th>
-                                <th>{{ $file->alumno_id }}</th>
+                                <th value="{{ $file->id }}">{{ $file->alumno_id }}</th>
                                 <th>{{ $file->files }}</th>
                                 <td>
                                     <div class="but">

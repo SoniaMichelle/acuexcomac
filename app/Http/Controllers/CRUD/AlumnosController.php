@@ -52,10 +52,20 @@ class AlumnosController extends Controller
         $registro->ap_materno_alumno = $request->ap_materno_alumno;
         $registro->curp_alumno = $request->curp_alumno;
 
-        if ($request->hasFile('fileCurp')) {
+       /*  if ($request->hasFile('fileCurp')) {
         $doc=$request->file('fileCurp');
            $doc->move(public_path().'/documentos', $doc->getClientOriginalName());
            $registro->fileCurp=$doc->getClientOriginalName();  
+        } */
+        if ($request->hasFile('fileCurp')) {
+            $doc=$request->file('fileCurp');
+            $nombre=time().".".$doc->guessExtension();
+            $ruta = public_path("archivos_alumnos/".$nombre);
+            if ($doc->guessExtension()=="pdf") {
+                copy($doc,$ruta);
+            }else{
+                alert('No es un pdf');
+            }
         }
         
         $registro->sexo_alumno = $request->sexo_alumno;

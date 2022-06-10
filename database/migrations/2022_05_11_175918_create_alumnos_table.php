@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('ap_paterno_alumno');
             $table->string('ap_materno_alumno');
             $table->string('curp_alumno');
-            $table->string('fileCurp');
             $table->string('sexo_alumno');
             $table->integer('edad_alumno');
             $table->string('nombre_tutor');
