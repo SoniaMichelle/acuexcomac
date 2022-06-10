@@ -12,13 +12,17 @@
                             <img src="{{ asset('img/logo.png') }}" style="width: 150px">
                         </div>
                         <h4 class="text-center">Iniciar Sesión</h4>
-                        @if ($errors->any())
+                        <div class="col-12 mt-3">
+                            @if ($errors->any())
                             <ul>
                                 @foreach ($errors->all() as $error)
-                                    <li>{{$error}}</li>
+                                <div class="alert alert-danger" role="alert">
+                                   {{$error}}
+                                  </div>
                                 @endforeach
                             </ul>
                         @endif
+                        </div>
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="input-field">

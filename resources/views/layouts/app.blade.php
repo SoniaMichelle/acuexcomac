@@ -44,7 +44,7 @@
         <section id="sidebar">
             <a href="" class="brand">
                 <span class="image">
-                    <img src={{ asset('img/logo.png') }} alt="">
+                    <img src={{ asset('img/Logo3.png') }} alt="">
                 </span> Acuexcomac
             </a>
             <ul class="side-menu">
