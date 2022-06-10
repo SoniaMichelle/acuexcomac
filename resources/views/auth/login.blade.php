@@ -12,12 +12,18 @@
                             <img src="{{ asset('img/logo.png') }}" style="width: 150px">
                         </div>
                         <h4 class="text-center">Iniciar Sesión</h4>
+                        @if ($errors->any())
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{$error}}</li>
+                                @endforeach
+                            </ul>
+                        @endif
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="input-field">
                                 <input id="email" type="text" name="email" placeholder="Introduce tu correo electrónico"
-                                    @error('email') is-invalid @enderror name="email" value="{{ old('email') }}"
-                                    autocomplete="email" autofocus>
+                                    value="{{ old('email') }}" autocomplete="email" autofocus>
                                 <i class='bx bx-envelope'></i>
                             </div>
                             <div id="alerta1"></div>

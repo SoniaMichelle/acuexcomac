@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\CRUD\AlumnosController;
 use App\Http\Controllers\CRUD\CursosController;
 use App\Http\Controllers\CRUD\DocenteController;
