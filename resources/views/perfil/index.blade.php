@@ -5,7 +5,7 @@
     <main>
         <h1 class="title">Perdil</h1>
         <ul class="breadcrumbs">
-            <li><a href="#">Dashboard</a></li>
+            <li><a href="{{ route('home') }}">Dashboard</a></li>
             <li class="divider">/</li>
             <li><a href="#" class="active">Perdil</a></li>
         </ul>
@@ -26,7 +26,7 @@
                                         <div class="form-group mt-3">
                                             <label for="email">Email</label>
                                             <input type="email" id="email" name="email" value="{{ Auth::user()->email }}"
-                                                class="form-control @error('email') is-invalid @enderror" required>
+                                                class="form-control @error('email') is-invalid @enderror">
                                         </div>
                                     </div>
                                     <div class="row mb-3">

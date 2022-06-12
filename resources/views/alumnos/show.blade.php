@@ -13,7 +13,7 @@
                     </a>
                     <h2 class="font-weight-bold text-center">Datos del Alumno</h2>
                     <div class="p-5 bg-white rouded shadow-lg">
-                        <form enctype="multipart/form-data">
+                        <form>
                             <h4 class="mt-4">Datos del Alumno</h4>
                             <div class="form-row">
                                 <div class="form-group col-md-4">
@@ -72,79 +72,81 @@
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-4">
-                                    <label for="cel_docente">Ciudad</label>
-                                    <span type="text" class="form-control" id="cel_docente"
-                                        name="cel_docente">{{ $alumno->ciudad_alumno }}</span>
+                                    <label for="ciudad_alumno">Ciudad</label>
+                                    <span type="text" class="form-control" id="ciudad_alumno"
+                                        name="ciudad_alumno">{{ $alumno->ciudad_alumno }}</span>
 
                                 </div>
                                 <div class="form-group col-md-4">
-                                    <label for="ciudad_docente">Alcaldia</label>
-                                    <span class="form-control" id="ciudad_docente"
-                                        name="ciudad_docente">{{ $alumno->alcaldia_alumno }}</span>
+                                    <label for="alcaldia_alumno">Alcaldia</label>
+                                    <span class="form-control" id="alcaldia_alumno"
+                                        name="alcaldia_alumno">{{ $alumno->alcaldia_alumno }}</span>
 
                                 </div>
                                 <div class="form-group col-md-4">
-                                    <label for="alcaldia_docente">Colonia</label>
-                                    <span class="form-control" id="alcaldia_docente"
-                                        name="alcaldia_docente">{{ $alumno->colonia_alumno }}</span>
+                                    <label for="colonia_alumno">Colonia</label>
+                                    <span class="form-control" id="colonia_alumno"
+                                        name="colonia_alumno">{{ $alumno->colonia_alumno }}</span>
 
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-8">
-                                    <label for="colonia_docente">Calle y Numero</label>
-                                    <span class="form-control" id="colonia_docente"
-                                        name="colonia_docente">{{ $alumno->calle_alumno }}</span>
+                                    <label for="calle_alumno">Calle y Numero</label>
+                                    <span class="form-control" id="calle_alumno"
+                                        name="calle_alumno">{{ $alumno->calle_alumno }}</span>
 
                                 </div>
                                 <div class="form-group col-md-4">
-                                    <label for="calle_docente">CP</label>
-                                    <span class="form-control" id="calle_docente"
-                                        name="calle_docente">{{ $alumno->cp_alumno }}</span>
+                                    <label for="cp_alumno">CP</label>
+                                    <span class="form-control" id="cp_alumno"
+                                        name="cp_alumno">{{ $alumno->cp_alumno }}</span>
                                 </div>
                             </div>
                             <h4 class="mt-4">Escolaridad</h4>
                             <div class="form-row">
                                 <div class="form-group col-md-4">
-                                    <label for="cp_docente">Curso</label>
-                                    <span class="form-control" id="cp_docente"
-                                        name="cp_docente">{{ $alumno->nombre_curso }}</span>
+                                    <label for="nombre_curso">Curso</label>
+                                    <span class="form-control" id="nombre_curso"
+                                        name="nombre_curso">{{ $alumno->nombre_curso }}</span>
                                 </div>
                                 <div class="form-group col-md-4">
-                                    <label for="cedula_docente">Grado</label>
-                                    <span class="form-control" id="cedula_docente"
-                                        name="cedula_docente">{{ $alumno->grado_id }}</span>
+                                    <label for="grado_id">Grado</label>
+                                    <span class="form-control" id="grado_id"
+                                        name="grado_id">{{ $alumno->grado_id }}</span>
                                 </div>
                                 <div class="form-group col-md-4">
-                                    <label for="especialidad">Ciclo Escolar</label>
-                                    <span class="form-control" id="especialidad"
-                                        name="especialidad">{{ $alumno->ciclo_escolar }}</span>
+                                    <label for="ciclo_escolar">Ciclo Escolar</label>
+                                    <span class="form-control" id="ciclo_escolar"
+                                        name="ciclo_escolar">{{ $alumno->ciclo_escolar }}</span>
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-4">
-                                    <label for="profesion">Año de Inicio</label>
-                                    <span class="form-control" id="profesion"
-                                        name="profesion">{{ $alumno->fecha_ingreso }}</span>
+                                    <label for="fecha_ingreso">Año de Inicio</label>
+                                    <span class="form-control" id="fecha_ingreso"
+                                        name="fecha_ingreso">{{ $alumno->fecha_ingreso }}</span>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="asignatura">Año de Fin de Curso</label>
-                                    <span class="form-control" id="asignatura"
-                                        name="asignatura">{{ $alumno->fecha_baja }}</span>
+                                    <span class="form-control" id="fecha_baja"
+                                        name="fecha_baja">{{ $alumno->fecha_baja }}</span>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="estatus">Status</label>
-                                    <span class="form-control" id="estatus"
-                                        name="estatus">{{ $alumno->estatus }}</span>
+                                    <span class="form-control" id="estatu"
+                                        name="estatu">{{ $alumno->estatus }}</span>
+                                    <div id="alerta17"></div>
                                 </div>
                             </div>
                         </form>
                         <div class="row text-center mb-4 mt-5 boton">
                             <div class="col-md-12 ">
-                                <a href="{{ route("alumnos.index")}}" class="btn btn-cancelar">Cancelar</a>
+                                <a href="{{ route('alumnos.index') }}" class="btn btn-cancelar">Cancelar</a>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

@@ -21,7 +21,7 @@
                                 $cant_grado= Grado::count();
                             @endphp
                             <span class="number">{{ $cant_grado }}</span>
-                            <small><a href="{{-- {{route('grado.index')}} --}}">ver más</a></small>
+                            <small><a href="{{ route('grados.index') }}">ver más</a></small>
                         </div>
                         <div class="box box2">
                             <i class='bx bxs-graduation icon'></i>

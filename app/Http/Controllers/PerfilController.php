@@ -35,14 +35,13 @@ class PerfilController extends Controller
             $confirPass = $request->confirm_password;
             $email       = $request->email;
 
-            $email       = $request->email;
+           /*  $email       = $request->email;
             $sqlBDUpdateName = DB::table('users')
                             ->where('id', $user->id)
-                            ->update(['email' => $email]);
-            return redirect()->back()->with('name','ok');;
+                            ->update(['email' => $email]); */
+           /*  return redirect()->back()->with('name','ok');; */
                 //Verifico si la clave actual es igual a la clave del usuario en session
                 if (Hash::check($request->password_actual, $userPassword)) {
-
                     //Valido que tanto la 1 como 2 clave sean iguales
                     if($NuewPass == $confirPass){
                         //Valido que la clave no sea Menor a 6 digitos

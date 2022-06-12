@@ -43,9 +43,8 @@
                             <div class="form-row">
                                 <div class=" form-group col-md-6">
                                     <label for="sexo_docente">Genero</label>
-                                    <select id="sexo_docente" name="sexo_docente" class="form-control"
-                                        value="{{ old('sexo_docente',$docentes->sexo_docente) }}">
-                                        <option selected>Seleccione un genero</option>
+                                    <select id="sexo_docente" name="sexo_docente" class="form-control">
+                                        <option selected value="{{ $docentes->sexo_docente }}">{{ $docentes->sexo_docente }}</option>
                                         <option>Masculino</option>
                                         <option>Femenino</option>
                                     </select>
@@ -128,27 +127,26 @@
                             </div>
                             <h4 class="mt-4">Escolaridad</h4>
                             <div class="form-row">
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-4">
                                     <label for="cedula_docente">Cedula</label>
                                     <input type="text" class="form-control" id="cedula_docente"
                                         name="cedula_docente" placeholder="Ingrese cedula profesional" value="{{ old('cedula_docente',$docentes->cedula_docente) }}">
                                         <div id="alerta14"></div>
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-4">
                                     <label for="especialidad">Especialidad</label>
                                     <input type="text" class="form-control" id="especialidad"
                                         name="especialidad" placeholder="Ingrese la especialidad" value="{{ old('especialidad',$docentes->especialidad) }}">
                                         <div id="alerta15"></div>
                                 </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-4">
                                     <label for="profesion">Profesion</label>
                                     <input type="text" class="form-control" id="profesion"
                                         name="profesion" placeholder="Ingrese la profesión" value="{{ old('profesion',$docentes->profesion) }}">
                                         <div id="alerta16"></div>
                                 </div>
                             </div>
+                           
                             <div class="row text-center mb-4 mt-5 boton">
                                 <div class="col-md-12 ">
                                     <button type="submit" onclick="return valDocenet();">Editar</button>

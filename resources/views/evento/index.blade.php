@@ -9,7 +9,7 @@
     <main>
         <h1 class="title">Eventos</h1>
         <ul class="breadcrumbs">
-            <li><a href="#">Dashboard</a></li>
+            <li><a href="{{ route('home') }}">Dashboard</a></li>
             <li class="divider">/</li>
             <li><a href="#" class="active">Eventos</a></li>
         </ul>

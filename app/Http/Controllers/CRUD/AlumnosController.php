@@ -108,6 +108,7 @@ class AlumnosController extends Controller
      */
     public function edit(Alumno $alumnos)
     {
+        
         return view('alumnos.editar',compact('alumnos'));
     }
 
@@ -120,6 +121,7 @@ class AlumnosController extends Controller
      */
     public function update(Request $request, Alumno $alumnos)
     {
+        
         $alumnos->sexo_alumno = $request->sexo_alumno;
         $alumnos->edad_alumno = $request->edad_alumno;
         $alumnos->nombre_tutor = $request->nombre_tutor;
@@ -136,6 +138,11 @@ class AlumnosController extends Controller
         $alumnos->fecha_ingreso = $request->fecha_ingreso;
         $alumnos->fecha_baja = $request->fecha_baja;
         $alumnos->estatus = $request->estatus;
+        $alumnos->nombre_curso = $request->nombre_curso;
+        $alumnos->grado_id = $request->grado_id;
+        $alumnos->ciclo_escolar = $request->ciclo_escolar;
+        $alumnos->fecha_ingreso = $request->fecha_ingreso;
+        $alumnos->fecha_baja = $request->fecha_baja;
 
         $alumnos->save();
         return redirect()->route('alumnos.index', $alumnos);
