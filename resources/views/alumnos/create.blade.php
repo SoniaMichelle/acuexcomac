@@ -57,8 +57,8 @@
                                     <select id="sexo_alumno" name="sexo_alumno" class="form-control"
                                         value="{{ old('sexo_alumno') }}">
                                         <option selected>Seleccione un genero</option>
-                                        <option>Masculino</option>
-                                        <option>Femenino</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Femenino">Femenino</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-6">
@@ -176,8 +176,8 @@
                                     <label for="estatus">Status</label>
                                     <select id="estatus" name="estatus" class="form-control">
                                         <option selected value="0">Seleccione un status</option>
-                                        <option value="1" class="btn btn-success">Activo</option>
-                                        <option value="2" class="btn btn-danger">Inactivo</option>
+                                        <option value="Activo" class="btn btn-success">Activo</option>
+                                        <option value="Inactivo" class="btn btn-danger">Inactivo</option>
                                     </select>
                                     <div id="alerta17"></div>
                                 </div>

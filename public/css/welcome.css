@@ -47,9 +47,9 @@ li {
 
 .grid::before {
     content: "";
-    grid-column: 5/-1;
+    grid-column: 6/-1;
     grid-row: 1/-1;
-    background-image: url('../img/a1.gif');
+    background-image: url('../img/index1.jpg');
     background-size: cover;
     background-position: right top;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
@@ -57,8 +57,8 @@ li {
 }
 
 .grid-texts {
-    grid-row: 2/-2;
-    grid-column: 2/8;
+    grid-row: 1/-1;
+    grid-column: 2/7;
     z-index: 1;
     display: flex;
     flex-direction: column;
