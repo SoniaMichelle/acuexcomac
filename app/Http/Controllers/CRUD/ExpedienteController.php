@@ -50,7 +50,7 @@ class ExpedienteController extends Controller
             $registro->files=$archivo->getClientOriginalName();
         }
         $registro->save();
-        return redirect()->route('expedientes.index', $registro);   
+        return redirect()->route('expedientes.index', $registro)->with('avance','exito');   
     }
 
     /**

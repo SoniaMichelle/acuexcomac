@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('nominas', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('docente_id')->nullable();
+            /* $table->unsignedBigInteger('docente_id')->nullable();
             $table->foreign('docente_id')
-            ->references('id')->on('docentes')->onDelete('cascade');
+            ->references('id')->on('docentes')->onDelete('cascade'); */
+            $table->string('name_docente');
             $table->date('fecha_nomina');
             $table->string('cantidad_nomina');
             $table->timestamps();

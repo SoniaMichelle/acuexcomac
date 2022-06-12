@@ -148,20 +148,12 @@
                                         name="profesion" placeholder="Ingrese la profesión" value="{{ old('profesion',$docentes->profesion) }}">
                                         <div id="alerta16"></div>
                                 </div>
-                                <div class=" form-group col-md-6">
-                                    <label for="asignatura">Asignatura</label>
-                                    <select id="asignatura" name="asignatura" class="form-control"
-                                        value="{{ old('asignatura',$docentes->asignatura) }}">
-                                        <option selected>Seleccione una asignatura</option>
-                                        <option>Masculino</option>
-                                        <option>Femenino</option>
-                                    </select>
-                                </div>
                             </div>
-                            <div class=" modal-footer">
-                                <button type="submit" class="btn btn-primary" onclick="return valDocenet();">Editar</button>
-                                <a href="{{ route('docentes.index') }}"><button type="button" class="btn cerrar"
-                                        data-dismiss="modal">Cancelar</button></a>
+                            <div class="row text-center mb-4 mt-5 boton">
+                                <div class="col-md-12 ">
+                                    <button type="submit" onclick="return valDocenet();">Editar</button>
+                                    <a href="{{ route("docentes.index")}}" class="btn btn-cancelar">Cancelar</a>
+                                </div>
                             </div>
                         </form>
                     </div>

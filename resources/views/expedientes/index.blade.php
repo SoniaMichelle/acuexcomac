@@ -14,8 +14,7 @@
                 <div class="head">
                     <h3>Lista Alumnos</h3>
                     <div class="menu">
-                        <a href="{{ route('expedientes.create') }}" style="text-decoration: none"><i
-                                class='bx bxs-user-plus icon'></i></a>
+                        <a href="{{ route('expedientes.create') }}" style="text-decoration: none"><i class='bx bxs-folder-plus icon'></i></a>
                     </div>
                 </div>
                 {{-- Tabla para mstrar los registros de los avances --}}
@@ -50,19 +49,21 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <form action="{{ route('expedientes.destroy', $file->id) }}" method="POST">
+                                    <form action="{{ route('expedientes.destroy', $file->id) }}" method="POST"
+                                        class="form_eliminar_avance>
                                         @csrf
                                         @method('delete')
-                                        <div class="but">
-                                            <button type="submit" class="btn btn-sm btn-outline-danger">Eliminar</button>
-                                        </div>
-                                    </form>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                                        <div class="
+                                        but">
+                                        <button type="submit" class="btn btn-sm btn-outline-danger">Eliminar</button>
             </div>
+            </form>
+            </td>
+            </tr>
+            @endforeach
+            </tbody>
+            </table>
+        </div>
         </div>
     </main>
     <!-- MAIN -->
@@ -71,4 +72,16 @@
     <script src="{{ asset('js/datatable.js') }}"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ asset('js/validacion.js') }}"></script>
+
+    @if (session('avances') == 'exit')
+        <script>
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Your work has been saved',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        </script>
+    @endif
 @endsection

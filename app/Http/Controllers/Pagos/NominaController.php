@@ -44,7 +44,7 @@ class NominaController extends Controller
     {
         $nuevo = new Nomina();
 
-        $nuevo->docente_id=$request->docente_id;
+        $nuevo->name_docente=$request->name_docente;
         $nuevo->fecha_nomina=$request->fecha_nomina;
         $nuevo->cantidad_nomina=$request->cantidad_nomina;
 
@@ -83,7 +83,7 @@ class NominaController extends Controller
      */
     public function update(Request $request, Nomina $nominas)
     {
-        $nominas->docente=$request->docente;
+        $nominas->name_docente=$request->name_docente;
         $nominas->fecha_nomina=$request->fecha_nomina;
         $nominas->cantidad_nomina=$request->cantidad_nomina;
         $nominas->save();

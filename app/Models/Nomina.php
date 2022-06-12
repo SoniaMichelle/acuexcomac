@@ -9,7 +9,7 @@ class Nomina extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'docente',
+        'docente_id',
         'fecha_nomina',
         'cantidad_nomina'
     ];

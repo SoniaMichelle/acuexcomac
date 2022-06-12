@@ -141,24 +141,27 @@
                                     <input type="text" class="form-control "
                                         id="nombre_curso" name="nombre_curso" placeholder="Curso"
                                         value="{{ old('nombre_curso') }}">
+                                        <div id="alerta13"></div>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="grado_id">Grado</label>
                                     <select id="grado_id" name="grado_id" class="form-control">
-                                        <option selected>Seleccione un grado</option>
+                                        <option selected value="0">Seleccione un grado</option>
                                         @foreach ($grupos as $grupo)
-                                            <option value="{{ $grupo->id }}"> {{ $grupo->nombre_grado }}</option>
+                                            <option selected value="{{ $grupo->id }}"> {{ $grupo->nombre_grado }}</option>
                                         @endforeach
                                     </select>
+                                    <div id="alerta14"></div>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="ciclo_escolar">Ciclo Escolar</label>
                                     <select id="ciclo_escolar" name="ciclo_escolar" class="form-control">
-                                        <option selected>Seleccione ciclo escolar</option>
+                                        <option selected value="0">Seleccione ciclo escolar</option>
                                         <option>2019</option>
                                         <option>2020</option>
                                         <option>2021</option>
                                     </select>
+                                    <div id="alerta15"></div>
                                 </div>
                             </div>
                             <div class="form-row">
@@ -166,18 +169,13 @@
                                     <label for="fecha_ingreso">Fecha de ingreso</label>
                                     <input type="text" class="form-control" id="fecha_ingreso"
                                         name="fecha_ingreso" placeholder="Año de alta">
+                                        <div id="alerta16"></div>
                                 </div>
                                 <div class="form-group col-md-3">
                                     <label for="fecha_baja">Fecha de baja</label>
                                     <input type="text" class="form-control" id="fecha_baja"
                                         name="fecha_baja" placeholder="Año de baja">
                                 </div>
-                                {{-- <div class="form-group col-md-2 mt-4 pt-3">
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1">En curso</label>
-                                    </div>
-                                </div> --}}
                                 <div class="form-group col-md-4">
                                     <label for="estatus">Status</label>
                                     <select id="estatus" name="estatus" class="form-control">
@@ -185,6 +183,7 @@
                                         <option value="Activo" class="btn btn-success">Activo</option>
                                         <option value="Inactivo" class="btn btn-danger">Inactivo</option>
                                     </select>
+                                    <div id="alerta17"></div>
                                 </div>
                             </div>
                             <div class="row text-center mb-4 mt-5 boton">
@@ -193,12 +192,6 @@
                                     <a href="{{ route("alumnos.index")}}" class="btn btn-cancelar">Cancelar</a>
                                 </div>
                             </div>
-                            {{-- <div class=" modal-footer">
-                                <button type="submit" class="btn btn-primary"
-                                    onclick="return validarAlum();">Registrar</button>
-                                <a href="{{ route('alumnos.index') }}"><button type="button" class="btn cerrar"
-                                        data-dismiss="modal">Cancelar</button></a>
-                            </div> --}}
                         </form>
                         {{-- FIN FORMULARIO --}}
 

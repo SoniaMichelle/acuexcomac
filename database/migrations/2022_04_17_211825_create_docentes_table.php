@@ -33,7 +33,7 @@ return new class extends Migration
             $table->string('cedula_docente');
             $table->string('especialidad');
             $table->string('profesion');
-            $table->string('asignatura');
+           /*  $table->string('asignatura'); */
             $table->timestamps();
         });
     }

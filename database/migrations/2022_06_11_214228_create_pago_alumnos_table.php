@@ -13,12 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tareas', function (Blueprint $table) {
+        Schema::create('pago_alumnos', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo_nota');
-            $table->string('body');
-            $table->string('color_nota');
-            $table->boolean('completed')->default(false);
+        
+          /*   $table->unsignedBigInteger('alumno_id');
+            $table->foreign('alumno_id')->references('id')->on('alumnos')->onDelete('cascade');
+ */
+            $table->string('name_alumno');
+            $table->string('concepto_alum');
+            $table->string('cantidad_alum')->nullable();
+            $table->date('fecha_alum');
             $table->timestamps();
         });
     }
@@ -30,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tareas');
+        Schema::dropIfExists('pago_alumnos');
     }
 };

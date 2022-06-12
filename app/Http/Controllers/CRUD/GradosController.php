@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Alumno;
 use App\Models\Grado;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use PDF;
 
 class GradosController extends Controller
 {
@@ -20,9 +22,20 @@ class GradosController extends Controller
         return view('alumnos.grado.index', compact('grados'));
     }
     public function obtenerAlumnos(Request $request,$id){
+        /* $listas = Alumno::where('grado_id', $id)->get();
+        return view('alumnos.lista',compact('listas')); */
         $listas = Alumno::where('grado_id', $id)->get();
-        /* dd( $listas); */
-        return view('alumnos.lista',compact('listas'));
+        $pdf = PDF::loadView('alumnos.grado.pdf',['grados'=>$listas]);
+       /*  $pdf->loadHTML('<h1>Test</h1>'); */
+        return $pdf->stream();
+        /* return view('alumnos.grado.pdf', compact('grados')); */
+    }
+    public function pdf(Request $request,$id){
+        $listas = Alumno::where('grado_id', $id)->get();
+        $pdf = PDF::loadView('alumnos.grado.pdf',['grados'=>$listas]);
+       /*  $pdf->loadHTML('<h1>Test</h1>'); */
+        return $pdf->stream();
+        /* return view('alumnos.grado.pdf', compact('grados')); */
     }
    
     /**
@@ -78,9 +91,12 @@ class GradosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Grado $grados)
     {
-        //
+        $grados->nombre_grado=$request->nombre_grado;
+
+        $grados->save();
+        return redirect()->route('grados.index', $grados);
     }
 
     /**

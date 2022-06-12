@@ -1,4 +1,4 @@
-/* $(document).ready(function() {
+$(document).ready(function() {
     $('#example').DataTable({
         responsive: true,
         autowidth: false,
@@ -18,7 +18,7 @@
             },
             "sProcessing": "Procesando...",
         },
-        dom: 'Bfrtilp',
+
         buttons: [{
                 extends: 'excelHtml5',
                 text: 'Excel',
@@ -31,16 +31,11 @@
                 titleAttr: 'Exportar a PDF',
                 className: 'btn btn-danger'
             },
-            {
-                extends: 'print',
-                text: 'Imprmir',
-                titleAttr: 'Imprmir',
-                className: 'btn btn-info'
-            }
+
         ]
     });
-}); */
-$(document).ready(function() {
+});
+/* $(document).ready(function() {
     $('#example').DataTable({
         responsive: true,
         autowidth: false,
@@ -82,4 +77,4 @@ $(document).ready(function() {
             },
         ]
     });
-});
+}); */

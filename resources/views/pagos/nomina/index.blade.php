@@ -34,12 +34,12 @@
                         @foreach ($nomina as $nominas)
                             <tr>
                                 <td scope="row">{{ $nominas->id }}</td>
-                                <td>{{ $nominas->docente_id }}</td>
+                                <td>{{ $nominas->name_docente }}</td>
                                 <td>{{ $nominas->fecha_nomina }}</td>
                                 <td>$ {{ $nominas->cantidad_nomina }}</td>
                                 <td>
                                     {{-- Editar --}}
-                                    <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal"
+                                    <button type="button" class="btn btn-sm btn-outline-warning" data-toggle="modal"
                                         data-target="#editar{{ $nominas->id }}"><i class='bx bxs-edit-alt'></i>
                                     </button>
                                     <!-- Modal -->
@@ -60,11 +60,11 @@
                                                         @csrf
                                                         @method('put')
                                                         <div class="form-group">
-                                                            <label for="docente">Nombre del Docente</label>
-                                                            <input type="text" class="form-control" id="docente"
-                                                                name="docente" aria-describedby="emailHelp"
+                                                            <label for="name_docente">Nombre del Docente</label>
+                                                            <input type="text" class="form-control" id="name_docente"
+                                                                name="name_docente" aria-describedby="emailHelp"
                                                                 placeholder="Nombre del Docente"
-                                                                value="{{ old('docente', $nominas->docente_id) }}">
+                                                                value="{{ old('name_docente', $nominas->name_docente) }}">
                                                             <div id="alerta"></div>
                                                         </div>
                                                         <div class="form-group">

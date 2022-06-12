@@ -59,7 +59,7 @@ class DocenteController extends Controller
         $registro->cedula_docente= $request->cedula_docente;
         $registro->especialidad= $request->especialidad;
         $registro->profesion= $request->profesion;
-        $registro->asignatura= $request->asignatura;
+       /*  $registro->asignatura= $request->asignatura; */
         $registro->save();
         return redirect()->route('docentes.index', $registro);
 
@@ -115,7 +115,7 @@ class DocenteController extends Controller
         $docentes->cedula_docente= $request->cedula_docente;
         $docentes->especialidad= $request->especialidad;
         $docentes->profesion= $request->profesion;
-        $docentes->asignatura= $request->asignatura;
+       /*  $docentes->asignatura= $request->asignatura; */
 
         $docentes->save();
         return redirect()->route('docentes.index', $docentes);

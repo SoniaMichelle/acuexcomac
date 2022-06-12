@@ -147,7 +147,7 @@
                                         name="profesion" placeholder="Ingrese la profesión">
                                         <div id="alerta16"></div>
                                 </div>
-                                <div class=" form-group col-md-6">
+                               {{--  <div class=" form-group col-md-6">
                                     <label for="asignatura">Asignatura</label>
                                     <select id="asignatura" name="asignatura" class="form-control"
                                         value="{{ old('asignatura') }}">
@@ -155,7 +155,7 @@
                                         <option>Masculino</option>
                                         <option>Femenino</option>
                                     </select>
-                                </div>
+                                </div> --}}
                             </div>
                             <div class="row text-center mb-4 mt-5 boton">
                                 <div class="col-md-12 ">

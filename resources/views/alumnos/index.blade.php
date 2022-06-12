@@ -39,12 +39,11 @@
                                 <td>{{ $alumno->nombre_alumno }}</td>
                                 <td>{{ $alumno->ap_paterno_alumno }}</td>
                                 <td>{{ $alumno->estatus }}
-                                   {{--  @if ($alumno->estatus == 'Activo')
+                                    {{-- @if ($alumno->estatus == 'Activo')
                                         <span class="btn-sm btn-succes">Activo</span>
                                     @else
                                         <span class="btn-sm btn-danger">Inactivo</span>
-                                    @endif
- --}}
+                                    @endif --}}
                                 </td>
                                 <td>
                                     <a class="btn btn-outline-success" href="{{ route('alumnos.show', $alumno->id) }}"><i
@@ -80,4 +79,5 @@
     <script src="{{ asset('js/datatable.js') }}"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ asset('js/validacion.js') }}"></script>
+
 @endsection

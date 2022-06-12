@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\CRUD\AlumnosController;
+use App\Http\Controllers\CRUD\ArchivosCrontoller;
 use App\Http\Controllers\CRUD\CursosController;
 use App\Http\Controllers\CRUD\DocenteController;
 use App\Http\Controllers\CRUD\EventoController;
@@ -55,6 +56,7 @@ Route::delete('/alumnos/{alumno}', [AlumnosController::class,'destroy'])->name('
 Route::get('/grados',[GradosController::class,'index'])->name('grados.index');
 Route::get('/grados/nuevo', [GradosController::class, 'create'])->name('grados.create');
 Route::post('/grados/registrar', [GradosController::class, 'store'])->name('grados.store');
+Route::put('/grados/{grados}', [GradosController::class, 'update'])->name('grados.update');
 
 Route::get('/alumnos/grados/{id}', [GradosController::class, 'obtenerAlumnos'])->name('alumnos.lista');
 Route::delete('/grados/{grado}', [GradosController::class,'destroy'])->name('grados.destroy');
@@ -87,7 +89,7 @@ Route::delete('/nomina/{nominas}', [NominaController::class,'destroy'])->name('n
 Route::get('/pagos/nuevo', [AlumController::class, 'create'])->name('pago.create');
 Route::post('/pagos/registro', [AlumController::class, 'store'])->name('pago.store');
 Route::get('/pagos/{pagos}/editar', [AlumController::class, 'edit'])->name('pago.editar');
-Route::put('/pagos/{pagos}', [AlumController::class, 'update'])->name('pago.update');
+Route::put('/pagos/{id}', [AlumController::class, 'update'])->name('pago.update');
 Route::delete('/pagos/{pagos}', [AlumController::class,'destroy'])->name('pago.destroy');
 
 /* EVENTOS */
@@ -104,16 +106,14 @@ Route::post('/evento/actualizar/{evento}', [EventoController::class, 'update'])-
 /* 20. RUTA PARA BORRAR */
 Route::post('/evento/borrar/{id}', [EventoController::class, 'destroy'])->name('evento.borrar');
 
-
-/* TAREAS */
-Route::get('/tareas',[TareasController::class,'index'])->name('tareas');
-Route::get('/nota/nuevo',[TareasController::class,'create'])->name('nota.create');
-Route::post('/nota/registro', [TareasController::class, 'store'])->name('nota.store');
-
-
 /* GESTOR ARCHIVOS */
 Route::get('/expedientes',[ExpedienteController::class,'index'])->name('expedientes.index');
 Route::get('/expedientes/nuevo',[ExpedienteController::class,'create'])->name('expedientes.create');
 Route::post('/expedientes/registro', [ExpedienteController::class, 'store'])->name('expedientes.store');
 Route::delete('borrar/{file}', [ExpedienteController::class, 'destroy'])->name('expedientes.destroy');
 
+
+
+/* RUTA PDF */
+/* Route::get('/grados/pdf/{id}',[GradosController::class,'pdf'])->name('grados.pdf');
+ */

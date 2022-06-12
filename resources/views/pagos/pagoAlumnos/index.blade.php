@@ -33,15 +33,16 @@
                     <tbody>
                         @foreach ($pago as $pagos)
                             <tr>
-                                <td scope="row">{{ $pagos->alumno_id }}</td>
-                                <td> {{ $pagos->nombre_alumno }} </td>
+                                <td scope="row">{{ $pagos->id}}</td>
+                                <td> {{ $pagos->name_alumno }} </td>
                                 <td>{{ $pagos->concepto_alum }}</td>
                                 <td>$ {{ $pagos->cantidad_alum }}</td>
                                 <td>{{ $pagos->fecha_alum }}</td>
 
+
                                 <td>
                                     {{-- Editar --}}
-                                    <button type="button" class="btn b2 icono2" data-toggle="modal"
+                                    <button type="button" class="btn btn-outline-warning" data-toggle="modal"
                                         data-target="#editar{{ $pagos->id }}"><i class='bx bxs-edit-alt'></i>
                                     </button>
                                     <!-- Modal -->
@@ -58,18 +59,19 @@
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <form action="{{ route('pago.update', $pagos) }}" method="POST">
+                                                    <form action="{{ route('pago.update', $pagos->id) }}" method="POST">
                                                         @csrf
                                                         @method('put')
                                                         <div class="form-group">
-                                                            <label for="alum">Nombre del Docente</label>
-                                                            <input type="text" class="form-control" id="alum" name="alum"
-                                                                aria-describedby="emailHelp" placeholder="Nombre del Alumno"
-                                                                value="{{ old('alum', $pagos->alum) }}">
+                                                            <label for="name_alumno">Nombre del Alumno</label>
+                                                            <input type="text" class="form-control" id="name_alumno"
+                                                                name="name_alumno" aria-describedby="emailHelp"
+                                                                placeholder="Concepto"
+                                                                value="{{ old('name_alumno', $pagos->name_alumno) }}">
                                                             <div id="alerta"></div>
                                                         </div>
                                                         <div class="form-group">
-                                                            <label for="concepto_alum">Nombre del Docente</label>
+                                                            <label for="concepto_alum">Concepto</label>
                                                             <input type="text" class="form-control" id="concepto_alum"
                                                                 name="concepto_alum" aria-describedby="emailHelp"
                                                                 placeholder="Concepto"
@@ -108,7 +110,7 @@
                                         class="form_eliminar_nomina">
                                         @csrf
                                         @method('delete')
-                                        <button type="submit" class="b3 icono3">
+                                        <button type="submit" class="btn btn-outline-danger">
                                             <i class='bx bxs-user-x'></i>
                                         </button>
                                     </form>

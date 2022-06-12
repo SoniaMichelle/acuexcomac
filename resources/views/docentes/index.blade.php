@@ -38,13 +38,11 @@
                                     <td>{{ $docente->ap_paterno_docente }}</td>
                                     <td>{{ $docente->asignatura }} </td>
                                     <td>
-                                        <a href="{{ route('docentes.show', $docente->id) }}"><button type="button"
-                                                class="b1 icono1"><i class='bx bxs-user-detail'></i></button>
+                                        <a class="btn btn-outline-warning" href="{{ route('docentes.show', $docente->id) }}"><i class='bx bxs-user-detail'></i>
                                         </a>
                                     </td>
                                     <td>
-                                        <a href="{{ route('docentes.editar', $docente->id) }}"><button type="button"
-                                                class="b2 icono2"><i class='bx bxs-edit-alt'></i></button>
+                                        <a class="btn btn-outline-success" href="{{ route('docentes.editar', $docente->id) }}"><i class='bx bxs-edit-alt'></i></button>
                                         </a>
                                     </td>
                                     <td>
@@ -52,7 +50,7 @@
                                             class="form_eliminar_doc">
                                             @csrf
                                             @method('delete')
-                                            <button type="submit" class="b3 icono3">
+                                            <button type="submit" class="btn btn-outline-danger">
                                                 <i class='bx bxs-user-x'></i>
                                             </button>
                                         </form>

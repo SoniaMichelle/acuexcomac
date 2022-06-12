@@ -16,12 +16,14 @@
                         @csrf
                         <div class="form-group">
                             <label for="alumno_id">Alumno</label>
-                            <select name="alumno_id" id="alumno_id" class="form-control">
-                                <option selected value="0">Seleccione un alumno</option>
+                            {{-- <select name="alumno_id" id="alumno_id" class="form-control">
+                                <option selected>Seleccione un alumno</option>
                                 @foreach ($palumnos as $palumno)
                                     <option value="{{ $palumno->id }}"> {{ $palumno->nombre_alumno }}</option>
                                 @endforeach
-                            </select>
+                            </select> --}}
+                            <input type="text" class="form-control" id="name_alumno" name="name_alumno"
+                                placeholder="Nombre Alumno" value="{{ old('name_alumno') }}">
                         </div>
                         <div class="form-group">
                             <label for="concepto_alum">Concepto</label>
@@ -43,8 +45,8 @@
                         </div>
                         <div class="row text-center mb-4 mt-5 boton">
                             <div class="col-md-12 ">
-                                <button type="submit"  onclick="return valPagoAlum();">Registrar</button>
-                                <a href="{{ route("pago.index")}}" class="btn btn-cancelar">Cancelar</a>
+                                <button type="submit" onclick="return valPagoAlum();">Registrar</button>
+                                <a href="{{ route('pago.index') }}" class="btn btn-cancelar">Cancelar</a>
                             </div>
                         </div>
                     </form>

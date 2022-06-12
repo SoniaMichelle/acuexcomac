@@ -10,14 +10,14 @@
     {{-- TITULO DE LAS VENTANAS --}}
     <title>@yield('titulo')</title>
     {{-- FAVICOM --}}
-    <link rel="shortcut icon" href="{{ asset('img/logo.png') }}">
+    <link rel="shortcut icon" href="{{ asset('img/Logo3.png') }}">
 
     <!-- Scripts -->
     {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
 
     <!-- Fonts -->
-    {{-- <link rel="dns-prefetch" href="//fonts.gstatic.com"> --}}
-    {{-- <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> --}}
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     {{-- LIBRERIA --}}
     <link href="{{ asset('libreria/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -26,12 +26,12 @@
     <link href="{{ asset('libreria/boxicons-2.1.2/css/boxicons.css') }}" rel="stylesheet">
 
     {{-- DATATABLE --}}
-    {{-- <link href="{{ asset('libreria/datatables/datatables.min.css') }}" rel="stylesheet"> --}}
-   {{--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link href="{{ asset('libreria/datatables/datatables.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.bootstrap4.min.css"> --}}
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.bootstrap4.min.css">
 
-    <link rel="stylesheet" href="{{asset('dataTables/datatables.min.css')}}">
+    {{-- <link rel="stylesheet" href="{{asset('dataTables/datatables.min.css')}}"> --}}
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
@@ -80,13 +80,11 @@
                     <a href="#"><i class='bx bxs-notepad icon'></i>Eventos<i class='bx bx-chevron-right icon-right'></i></a>
                     <ul class="side-dropdown">
                         <li><a href="{{ route('evento') }}">Todos los eventos</a></li>
-                        <li><a href="{{ route('tareas') }}">Tareas</a></li>
-                       {{--  <li><a href="{{ route('evento.completo') }}">Eventos Terminados</a></li> --}}
                     </ul>
                 </li>
                 <li class="divider" data-text="Gestor Archivos">Gestor</li>
                 <li>
-                    <a href="#"><i class='bx bxs-file icon'></i> Avances <i
+                    <a href="#"><i class='bx bxs-file icon'></i> Expedientes <i
                             class='bx bx-chevron-right icon-right'></i></a>
                     <ul class="side-dropdown">
                         <li><a href="{{ route('expedientes.index') }}">Todos los evances</a></li>
@@ -94,7 +92,7 @@
                 </li>
             </ul>
             <div class="ads">
-                <div class="wrapper">
+                   <div class="wrapper">
                     <a class="btn-upgrade" href="{{ route('logout') }}"
                         onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
@@ -145,11 +143,11 @@
     <script src="{{ asset('libreria/popper/popper.min.js') }}"></script>
     <script src="{{ asset('libreria/bootstrap/js/bootstrap.min.js') }}"></script>
     {{-- <script src="{{ asset('libreria/sweetAlert2/sweetalert2.all.min.js') }}"></script> --}}
-    {{-- <script src="{{ asset('libreria/datatables/datatables.min.js') }}"></script> --}}
+    <script src="{{ asset('libreria/datatables/datatables.min.js') }}"></script>
   {{--   <script src="{{ asset('https://cdn.jsdelivr.net/npm/apexcharts') }}"></script> --}}
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+ {{--  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <script src=" https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-  <script src=" https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script>
+  <script src=" https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap4.min.js"></script> --}}
   {{-- TABLA RESPONSIVA --}}
   <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
   <script src="https://cdn.datatables.net/responsive/2.3.0/js/responsive.bootstrap4.min.js"></script>

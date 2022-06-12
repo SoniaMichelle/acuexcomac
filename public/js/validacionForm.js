@@ -12,6 +12,11 @@ function validarAlum() {
     var colonia_alumno = document.getElementById('colonia_alumno');
     var calle_alumno = document.getElementById('calle_alumno');
     var cp_alumno = document.getElementById('cp_alumno');
+    var nombre_curso = document.getElementById('nombre_curso');
+    var grado = document.getElementById('grado_id');
+    var ciclo_escolar = document.getElementById('ciclo_escolar');
+    var fecha_ingreso = document.getElementById('fecha_ingreso');
+    var estatus = document.getElementById('estatus');
 
     if (nombre_alumno.value == "") {
         /* alert("ingrese nombre"); */
@@ -162,7 +167,6 @@ function validarAlum() {
         document.getElementById("alerta11").innerHTML = '';
     }
     if (cp_alumno.value == "") {
-        /* alert("ingrese nombre"); */
         document.getElementById("alerta12").innerHTML = '<small style="color: #EC7063 "> <strong>* Favor de ingresar el CP</strong></small>';
         cp_alumno.focus();
         return false;
@@ -172,6 +176,41 @@ function validarAlum() {
         return false;
     } else {
         document.getElementById("alerta12").innerHTML = '';
+    }
+    if (nombre_curso.value == "") {
+        document.getElementById("alerta13").innerHTML = '<small style="color: #EC7063 "> <strong>* Favor de ingresar el Curso</strong></small>';
+        nombre_curso.focus();
+        return false;
+    } else {
+        document.getElementById("alerta13").innerHTML = '';
+    }
+    if (grado.value == "") {
+        document.getElementById("alerta14").innerHTML = '<small style="color: #EC7063 "> <strong>* Favor de ingresar el Grado</strong></small>';
+        grado.focus();
+        return false;
+    } else {
+        document.getElementById("alerta14").innerHTML = '';
+    }
+    if (ciclo_escolar.value == "") {
+        document.getElementById("alerta15").innerHTML = '<small style="color: #EC7063 "> <strong>* Favor de ingresar el Ciclo Escolar</strong></small>';
+        ciclo_escolar.focus();
+        return false;
+    } else {
+        document.getElementById("alerta15").innerHTML = '';
+    }
+    if (fecha_ingreso.value == "") {
+        document.getElementById("alerta16").innerHTML = '<small style="color: #EC7063 "> <strong>* Favor de ingresar el Fecha Ingreso</strong></small>';
+        fecha_ingreso.focus();
+        return false;
+    } else {
+        document.getElementById("alerta16").innerHTML = '';
+    }
+    if (estatus.value == "") {
+        document.getElementById("alerta17").innerHTML = '<small style="color: #EC7063 "> <strong>* Favor de ingresar el Status</strong></small>';
+        estatus.focus();
+        return false;
+    } else {
+        document.getElementById("alerta17").innerHTML = '';
     }
 
     Swal.fire(

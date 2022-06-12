@@ -37,11 +37,11 @@ class AlumController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request )
+    public function store(Request $request)
     {
         $nuevo = new PagoAlumno();
         
-        $nuevo->alumno_id = $request->alumno_id;
+        $nuevo->name_alumno = $request->name_alumno;
         $nuevo->fecha_alum=$request->fecha_alum;
         $nuevo->cantidad_alum=$request->cantidad_alum;
         $nuevo->concepto_alum=$request->concepto_alum;
@@ -66,9 +66,9 @@ class AlumController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(PagoAlumno $pagos)
     {
-        //
+        
     }
 
     /**
@@ -80,7 +80,8 @@ class AlumController extends Controller
      */
     public function update(Request $request, PagoAlumno $pagos)
     {
-        $pagos->alum=$request->alum;
+
+        $pagos->name_alumno=$request->name_alumno;
         $pagos->concepto_alum=$request->concepto_alum;
         $pagos->cantidad_alum=$request->cantidad_alum;
         $pagos->fecha_alum=$request->fecha_alum;

@@ -9,7 +9,7 @@ class PagoAlumno extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'alum',
+        'alumno_id',
         'concepto_alum',
         'cantidad_alum',
         'fecha_alum',

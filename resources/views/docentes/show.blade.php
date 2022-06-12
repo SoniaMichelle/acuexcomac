@@ -105,34 +105,28 @@
                             </div>
                             <h4 class="mt-4">Escolaridad</h4>
                             <div class="form-row">
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-4">
                                     <label for="cedula_docente">Cedula</label>
                                     <span class="form-control" id="cedula_docente" name="cedula_docente">{{ $docente->cedula_docente}}</span>
         
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-4">
                                     <label for="especialidad">Especialidad</label>
                                     <span class="form-control" id="especialidad" name="especialidad">{{ $docente->especialidad}}</span>
         
                                 </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-4">
                                     <label for="profesion">Profesion</label>
                                     <span class="form-control" id="profesion" name="profesion">{{ $docente->profesion}}</span>
         
                                 </div>
-                                <div class="form-group col-md-6">
-                                    <label for="asignatura">Asignatura</label>
-                                    <span class="form-control" id="asignatura" name="asignatura">{{ $docente->asignatura}}</span>
-        
-                                </div>
-                            </div>
-                            <div class=" modal-footer">
-                                <a href="{{ route('docentes.index') }}"><button type="button" class="btn cerrar"
-                                        data-dismiss="modal">Regresar</button></a>
                             </div>
                         </form>
+                        <div class="row text-center mb-4 mt-5 boton">
+                            <div class="col-md-12 ">
+                                <a href="{{ route("docentes.index")}}" class="btn btn-cancelar">Regresar</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

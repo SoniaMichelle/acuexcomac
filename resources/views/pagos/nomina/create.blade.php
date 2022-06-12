@@ -9,19 +9,22 @@
         <div class="evento">
             <div class="content-data">
                 <div class="head">
-                    <h2>Nuevo Evento</h2>
+                    <h2>Registro Pago Nomina</h2>
                 </div>
                 <div class="chart">
                     <form action="{{ route('nomina.store') }}" method="POST">
                         @csrf
                         <div class="form-group">
-                            <label for="docente_id">Nombre Docente</label>
-                            <select name="docente_id" id="docente_id" class="form-control">
+                            <label for="name_docente">Nombre Docente</label>
+                            <input type="text" class="form-control" id="name_docente"
+                            name="name_docente" placeholder="Nombre Docente"
+                            value="{{ old('name_docente') }}">
+                           {{--  <select name="docente_id" id="docente_id" class="form-control">
                                 <option selected value="0">Seleccione un docente</option>
                                 @foreach ($pnominas as $pnomina)
                                     <option value="{{ $pnomina->id }}"> {{ $pnomina->nombre_docente }}</option>
                                 @endforeach
-                            </select>
+                            </select> --}}
                         </div>
                         <div class="form-group">
                             <label for="fecha_nomina">Fecha</label>

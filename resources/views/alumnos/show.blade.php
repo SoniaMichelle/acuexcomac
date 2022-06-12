@@ -13,7 +13,7 @@
                     </a>
                     <h2 class="font-weight-bold text-center">Datos del Alumno</h2>
                     <div class="p-5 bg-white rouded shadow-lg">
-                        <form>
+                        <form enctype="multipart/form-data">
                             <h4 class="mt-4">Datos del Alumno</h4>
                             <div class="form-row">
                                 <div class="form-group col-md-4">
@@ -122,36 +122,29 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-4">
                                     <label for="profesion">Año de Inicio</label>
                                     <span class="form-control" id="profesion"
                                         name="profesion">{{ $alumno->fecha_ingreso }}</span>
                                 </div>
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-4">
                                     <label for="asignatura">Año de Fin de Curso</label>
                                     <span class="form-control" id="asignatura"
                                         name="asignatura">{{ $alumno->fecha_baja }}</span>
                                 </div>
-                            </div>
-                            <h4 class="mt-4">Documentacion</h4>
-                            <div class="form-row mt-3">
-                                <div class="form-group col">
-                                    {{-- <span class="form-control btn-info" id="asignatura"
-                                        name="asignatura">{{ $alumno->fileCurp }}</span> --}}
-                                    <div class="but">
-                                        <a target="blank_" class="form-control btn-info"
-                                            href="archivos_alumnos/{{ $alumno->fileCurp }}">{{ $alumno->fileCurp }}</a>
-                                    </div>
+                                <div class="form-group col-md-4">
+                                    <label for="estatus">Status</label>
+                                    <span class="form-control" id="estatus"
+                                        name="estatus">{{ $alumno->estatus }}</span>
                                 </div>
                             </div>
                         </form>
-                        <div class=" modal-footer">
-                            {{-- <button type="submit" class="btn btn-primary" id="btn_registrar_alumno">Registrar</button> --}}
-                            <a href="{{ route('alumnos.index') }}"><button type="button" class="btn cerrar"
-                                    data-dismiss="modal">Regresar</button></a>
+                        <div class="row text-center mb-4 mt-5 boton">
+                            <div class="col-md-12 ">
+                                <a href="{{ route("alumnos.index")}}" class="btn btn-cancelar">Cancelar</a>
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

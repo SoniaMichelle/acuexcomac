@@ -88,4 +88,26 @@ $(document).ready(function() {
             }
         })
     });
+    $('.form_eliminar_avance').submit(function(e) {
+        e.preventDefault();
+        Swal.fire({
+            title: '¿Estas seguro de querer eliminar?',
+            text: "No podrás revertir esto.!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#2ECC71',
+            cancelButtonColor: '#E74C3C ',
+            confirmButtonText: 'Si, eliminar!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                this.submit();
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'El avance no se elimino!'
+                })
+            }
+        })
+    });
 });
