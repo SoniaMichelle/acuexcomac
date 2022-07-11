@@ -61,11 +61,6 @@ Route::put('/grados/{grados}', [GradosController::class, 'update'])->name('grado
 Route::get('/alumnos/grados/{id}', [GradosController::class, 'obtenerAlumnos'])->name('alumnos.lista');
 Route::delete('/grados/{grado}', [GradosController::class,'destroy'])->name('grados.destroy');
 
-/* LISTA DE ALUMNOS */
-/* Route::get('/lista/grado/{grado_id}',[AlumnosController::class,'lista'])->name('alumnos.lista');
- */
-/* Route::get('grado/{gradoId}',[GradosController::class,'lista'])->name('alumnos.lista');
- */
 /* DOCENTES */
 Route::get('/docentes',[DocenteController::class,'index'])->name('docentes.index');
 Route::get('/docentes/nuevo', [DocenteController::class, 'create'])->name('docentes.create');

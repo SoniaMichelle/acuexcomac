@@ -21,15 +21,7 @@ class GradosController extends Controller
         $grados = Grado::all();
         return view('alumnos.grado.index', compact('grados'));
     }
-    public function obtenerAlumnos(Request $request,$id){
-        /* $listas = Alumno::where('grado_id', $id)->get();
-        return view('alumnos.lista',compact('listas')); */
-        $listas = Alumno::where('grado_id', $id)->get();
-        $pdf = PDF::loadView('alumnos.grado.pdf',['grados'=>$listas]);
-       /*  $pdf->loadHTML('<h1>Test</h1>'); */
-        return $pdf->stream();
-        /* return view('alumnos.grado.pdf', compact('grados')); */
-    }
+    
     public function pdf(Request $request,$id){
         $listas = Alumno::where('grado_id', $id)->get();
         $pdf = PDF::loadView('alumnos.grado.pdf',['grados'=>$listas]);

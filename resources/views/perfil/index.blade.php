@@ -3,11 +3,11 @@
 @section('contentenido')
     <!-- MAIN -->
     <main>
-        <h1 class="title">Perdil</h1>
+        <h1 class="title">Perfil</h1>
         <ul class="breadcrumbs">
             <li><a href="{{ route('home') }}">Dashboard</a></li>
             <li class="divider">/</li>
-            <li><a href="#" class="active">Perdil</a></li>
+            <li><a href="#" class="active">Perfil</a></li>
         </ul>
         <div class="data">
             <div class="content-data">

@@ -25,15 +25,6 @@
                     <td value="{{ $grado->id }}">{{ $grado->nombre_alumno }}</td>
                     <td>{{ $grado->ap_paterno_alumno }}</td>
                     <td>{{ $grado->ap_materno_alumno }}</td>
-                    {{-- <td>
-                        <form action="" method="POST" class="form_eliminar_alumno">
-                            @csrf
-                            @method('delete')
-                            <button type="submit" class="b3 icono3">
-                                <i class='bx bxs-user-x'></i>
-                            </button>
-                        </form>
-                    </td> --}}
                 </tr>
             @endforeach
         </tbody>
